@@ -1,0 +1,105 @@
+body {
+	background-image: url(pythonlogo.png);
+	background-size: 40%;
+	background-position: 50% 80%;
+    background-attachment:fixed;
+    background-repeat: no-repeat
+	}
+
+.navbar-default {
+    background-color: #209dd3;
+    border-color: #fdff00;
+}
+
+.profile-thumbnail {
+    position: absolute;
+}
+
+.profile-header {
+    min-height: 260px;
+    margin-left: 280px;
+}
+
+ul.semantics {
+    list-style-type: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+    border-top: 1px solid #000000;
+}
+
+div.parent_popup {
+  background: #000;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+div.popup {
+  background-color: #00f;
+  height: 200px;
+  position: fixed;
+  top: 100px;
+  left: 40%;
+  color: #f00;
+  width: 300px;
+}
+
+ul.semantics li.semantic {
+    padding: 1px;
+    border-bottom: 1px solid #000000;
+}
+
+ul.semantics li.semantic:hover {
+    background-color: #fdff00;
+    opacity: 0.6;
+}
+
+div.semantic-function {
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 48px;
+    margin-top: 1em;
+}
+
+div.semantic-body {
+    font-size: larger;
+}
+
+div.post-thumbnail {
+    position: absolute;
+}
+
+div.semantic-content {
+    margin-left: 48px;
+    min-height: 48px;
+}
+
+div.pagination {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+p.cat {
+    text-align: center;
+
+}
+
+
+h1.aq {
+    font-style: italic;
+
+}
+
+.profile-list {
+    font-size: large;
+}

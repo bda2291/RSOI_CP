@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Taxi service</h1>
+            {% if flash_msg %}
+            <div class="error">
+                {{ flash_msg }}
+            </div>
+            {% end %}
+        <form method="get" action="/type">
+        <button type="submit">Register</button>
+        </form>
+        <form method="get" action="/login">
+        <button type="submit">Log in</button>
+        </form>
+    </body>
+</html>

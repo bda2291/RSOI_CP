@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Register</h1>
+    {% if flash_msg %}
+        <div class="error">
+            {%for k in flash_msg%}
+                <br>{{flash_msg[k][0]}}</br>
+            {% end %}
+        </div>
+    {% end %}
+</div>
+<form enctype="multipart/form-data" action="/register" method="post">
+    <p>Username<br><input id="username" name="username" type="text" value=""></p>
+    <p>Email<br><input id="email" name="email" type="text" value=""></p>
+    <p>Password<br><input id="password" name="password" type="password" value=""></p>
+    <p>Confirm password<br><input id="password2" name="password2" type="password" value=""></p>
+    <input type="submit">
+</form>
+{% end %}

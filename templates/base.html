@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block title %}Dictionary of python{% end %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+{% end %}
+
+{% block navbar %}
+    <div class="navbar navbar-default" role="navigation" style="background-color:#209dd3">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color: #fdff00"; href="/">Dictionary of python</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:5000/list" style="color: #fdff00">List of ALL</a></li>
+                    {% if login %}
+                        <li><a href="http://localhost:5000/logout" style="color: #fdff00">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}" style="color: #fdff00">Log In</a></li>
+                    {% end %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% end %}
+
+{% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% end %}
+        {% block page_content %}{% end %}
+    </div>
+{% end %}
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% end %}
